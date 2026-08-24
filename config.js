@@ -7,7 +7,16 @@ const SITE = {
   businessName: "WILLS AUTOWORKS",
 
   tagline: "Professional service. Built around you.",
+hero: {
 
+  eyebrow: "Professional Service",
+
+  headline: "YOUR BUSINESS.<br>YOUR NEXT CUSTOMER.",
+
+  description:
+    "Professional service designed to help you get more customers and grow your business."
+
+},
   description:
     "Professional services designed to help customers get the quality, reliability, and experience they deserve.",
 
