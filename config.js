@@ -99,7 +99,27 @@ hero: {
   // =========================
   // WEBSITE SETTINGS
   // =========================
+reviews: [
 
+  {
+    name: "Customer Name",
+    text:
+      "Great service from beginning to end. I would absolutely recommend them."
+  },
+
+  {
+    name: "Customer Name",
+    text:
+      "Professional, responsive, and easy to work with. Excellent experience."
+  },
+
+  {
+    name: "Customer Name",
+    text:
+      "They delivered exactly what they promised. I'll definitely be back."
+  }
+
+],
   settings: {
 
     showReviews: true,
