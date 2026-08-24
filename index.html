@@ -582,26 +582,23 @@
 </script>
         <div class="about-copy">
 
-          <div class="eyebrow">
-            About Us
-          </div>
+<div class="eyebrow" id="aboutEyebrow">
+  About Us
+</div>
 
-          <h2>
-            Built Around<br>
-            Your Customers.
-          </h2>
+<h2 id="aboutHeadline">
+  Built Around<br>
+  Your Customers.
+</h2>
 
-          <p>
-            Tell the story of the business here.
-            Explain who you are, what you do,
-            and why customers choose you.
-          </p>
+<p id="aboutParagraph1">
+  Tell the story of the business here.
+</p>
 
-          <p>
-            Keep this section short, genuine,
-            and focused on the customer's needs.
-          </p>
-
+<p id="aboutParagraph2">
+  Keep this section short, genuine,
+  and focused on the customer's needs.
+</p>
           <a href="#contact" class="button button-primary">
             Learn More
           </a>
@@ -926,5 +923,20 @@
 
   document.getElementById("heroDescription").textContent =
     SITE.hero.description;
+
+</script>
+<script>
+
+  document.getElementById("aboutEyebrow").textContent =
+    SITE.about.eyebrow;
+
+  document.getElementById("aboutHeadline").innerHTML =
+    SITE.about.headline;
+
+  document.getElementById("aboutParagraph1").textContent =
+    SITE.about.paragraph1;
+
+  document.getElementById("aboutParagraph2").textContent =
+    SITE.about.paragraph2;
 
 </script>
