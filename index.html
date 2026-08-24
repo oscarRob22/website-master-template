@@ -444,7 +444,7 @@
 
     <div class="container nav">
 
-      <a href="#" class="logo">
+      <a href="#" class="logo" id="businessName">
         YOUR BUSINESS
       </a>
 
@@ -860,7 +860,7 @@
 
     <div class="container footer-content">
 
-      <div class="logo">
+      <div class="logo" id="footerBusinessName">
         YOUR BUSINESS
       </div>
 
@@ -873,6 +873,17 @@
   </footer>
 
 <script src="config.js"></script>
+
+<script>
+  document.getElementById("businessName").textContent =
+    SITE.businessName;
+
+  document.getElementById("footerBusinessName").textContent =
+    SITE.businessName;
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
