@@ -4,7 +4,7 @@ const SITE = {
   // BUSINESS INFORMATION
   // =========================
 
-  businessName: "YOUR BUSINESS",
+  businessName: "WILLS AUTOWORKS",
 
   tagline: "Professional service. Built around you.",
 
