@@ -558,58 +558,7 @@
 
           <article class="service">
 
-            <div class="service-number">
-              01
-            </div>
-
-            <h3>
-              Service One
-            </h3>
-
-            <p>
-              Describe the first major service
-              your business provides.
-            </p>
-
-          </article>
-
-
-          <article class="service">
-
-            <div class="service-number">
-              02
-            </div>
-
-            <h3>
-              Service Two
-            </h3>
-
-            <p>
-              Describe another important service
-              offered to customers.
-            </p>
-
-          </article>
-
-
-          <article class="service">
-
-            <div class="service-number">
-              03
-            </div>
-
-            <h3>
-              Service Three
-            </h3>
-
-            <p>
-              Explain the value of this service
-              in a simple, customer-friendly way.
-            </p>
-
-          </article>
-
-        </div>
+           <div class="services" id="servicesContainer"></div>
 
       </div>
 
@@ -894,6 +843,39 @@
 
 </body>
 </html>
+
+<script>
+
+  const servicesContainer =
+    document.getElementById("servicesContainer");
+
+  SITE.services.forEach((service, index) => {
+
+    const article = document.createElement("article");
+
+    article.className = "service";
+
+    const number = String(index + 1).padStart(2, "0");
+
+    article.innerHTML = `
+      <div class="service-number">
+        ${number}
+      </div>
+
+      <h3>
+        ${service.title}
+      </h3>
+
+      <p>
+        ${service.description}
+      </p>
+    `;
+
+    servicesContainer.appendChild(article);
+
+  });
+  
+</script>
 
 </body>
 </html>
