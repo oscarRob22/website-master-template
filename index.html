@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YOUR BUSINESS NAME</title>
+
+  <meta
+    name="description"
+    content="YOUR BUSINESS DESCRIPTION"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* ==========================
+       MASTER DESIGN SYSTEM
+    ========================== */
+
+    :root {
+      --primary: #111111;
+      --secondary: #f4f4f4;
+      --accent: #d9ff00;
+      --text: #111111;
+      --muted: #666666;
+      --white: #ffffff;
+      --border: #dddddd;
+
+      --font-heading: "Inter", sans-serif;
+      --font-body: "Inter", sans-serif;
+
+      --container: 1200px;
+      --radius: 0px;
+    }
+
+
+    /* ==========================
+       RESET
+    ========================== */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+
+    /* ==========================
+       GLOBAL
+    ========================== */
+
+    .container {
+      width: min(var(--container), 92%);
+      margin: auto;
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-heading);
+      line-height: 1.05;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+
+
+    /* ==========================
+       BUTTONS
+    ========================== */
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background: var(--accent);
+      color: var(--text);
+    }
+
+
+    /* ==========================
+       NAVIGATION
+    ========================== */
+
+    header {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+
+    /* ==========================
+       HERO
+    ========================== */
+
+    .hero {
+      background: var(--primary);
+      color: var(--white);
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #bbbbbb;
+      margin-bottom: 35px;
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+
+    /* ==========================
+       SERVICES
+    ========================== */
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .section-heading p {
+      max-width: 420px;
+      color: var(--muted);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .service {
+      background: var(--white);
+      padding: 35px;
+    }
+
+    .service-number {
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .service h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+
+    /* ==========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: var(--secondary);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 500px;
+      background:
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85")
+        center/cover;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin: 20px 0;
+      max-width: 550px;
+    }
+
+
+    /* ==========================
+       REVIEWS
+    ========================== */
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .review {
+      padding: 30px;
+      border: 1px solid var(--border);
+    }
+
+    .review p {
+      margin-bottom: 20px;
+    }
+
+    .review strong {
+      font-size: .8rem;
+      text-transform: uppercase;
+    }
+
+
+    /* ==========================
+       CTA
+    ========================== */
+
+    .cta {
+      background: var(--accent);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+
+    /* ==========================
+       CONTACT
+    ========================== */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin: 15px 0;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid var(--border);
+      outline: none;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+
+    /* ==========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      padding: 35px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+
+    /* ==========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 800px) {
+
+      nav {
+        display: none;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-heading p {
+        margin-top: 20px;
+      }
+
+      .services,
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 350px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ==========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#" class="logo">
+        YOUR BUSINESS
+      </a>
+
+      <nav>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#reviews">
+          Reviews
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+        <a href="tel:5555555555">
+          Call Now
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            Professional Service
+          </div>
+
+          <h1>
+            YOUR BUSINESS.<br>
+            YOUR NEXT CUSTOMER.
+          </h1>
+
+          <p>
+            A professional website built to help your
+            business look credible, get discovered,
+            and turn visitors into customers.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#contact" class="button button-secondary">
+              Get Started
+            </a>
+
+            <a href="tel:5555555555" class="button button-primary">
+              Call Now
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         SERVICES
+    ========================== -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="eyebrow">
+              What We Do
+            </div>
+
+            <h2>
+              Our Services
+            </h2>
+
+          </div>
+
+          <p>
+            Professional solutions designed around
+            what our customers actually need.
+          </p>
+
+        </div>
+
+
+        <div class="services">
+
+          <article class="service">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <h3>
+              Service One
+            </h3>
+
+            <p>
+              Describe the first major service
+              your business provides.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <h3>
+              Service Two
+            </h3>
+
+            <p>
+              Describe another important service
+              offered to customers.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <h3>
+              Service Three
+            </h3>
+
+            <p>
+              Explain the value of this service
+              in a simple, customer-friendly way.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-image"></div>
+
+        <div class="about-copy">
+
+          <div class="eyebrow">
+            About Us
+          </div>
+
+          <h2>
+            Built Around<br>
+            Your Customers.
+          </h2>
+
+          <p>
+            Tell the story of the business here.
+            Explain who you are, what you do,
+            and why customers choose you.
+          </p>
+
+          <p>
+            Keep this section short, genuine,
+            and focused on the customer's needs.
+          </p>
+
+          <a href="#contact" class="button button-primary">
+            Learn More
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         REVIEWS
+    ========================== -->
+
+    <section id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <div class="eyebrow">
+              Customer Feedback
+            </div>
+
+            <h2>
+              What Customers Say
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="reviews">
+
+          <article class="review">
+
+            <p>
+              "Great service from beginning to end.
+              I would absolutely recommend them."
+            </p>
+
+            <strong>
+              Customer Name
+            </strong>
+
+          </article>
+
+
+          <article class="review">
+
+            <p>
+              "Professional, responsive, and easy
+              to work with. Excellent experience."
+            </p>
+
+            <strong>
+              Customer Name
+            </strong>
+
+          </article>
+
+
+          <article class="review">
+
+            <p>
+              "They delivered exactly what they promised.
+              I'll definitely be back."
+            </p>
+
+            <strong>
+              Customer Name
+            </strong>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="eyebrow">
+          Ready To Get Started?
+        </div>
+
+        <h2>
+          Let's Work Together.
+        </h2>
+
+        <p>
+          Contact us today and let's talk about
+          how we can help.
+        </p>
+
+        <a href="#contact" class="button button-primary">
+          Contact Us
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+
+          <div class="eyebrow">
+            Contact
+          </div>
+
+          <h2>
+            Let's Talk.
+          </h2>
+
+          <p>
+            Have a question or ready to get started?
+            Send us a message.
+          </p>
+
+          <p>
+            <strong>Phone:</strong><br>
+            (555) 555-5555
+          </p>
+
+          <p>
+            <strong>Email:</strong><br>
+            hello@yourbusiness.com
+          </p>
+
+          <p>
+            <strong>Hours:</strong><br>
+            Monday–Saturday
+          </p>
+
+        </div>
+
+
+        <form
+          action="mailto:hello@yourbusiness.com"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          >
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+          >
+
+          <textarea
+            name="message"
+            placeholder="How can we help?"
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            class="button button-primary"
+          >
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div class="logo">
+        YOUR BUSINESS
+      </div>
+
+      <div>
+        © 2026 Your Business. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
