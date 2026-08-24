@@ -573,8 +573,13 @@
 
       <div class="container about-grid">
 
-        <div class="about-image"></div>
+        <div class="about-image" id="aboutImage"></div>
+<script>
 
+  document.getElementById("aboutImage").style.backgroundImage =
+    `url("${SITE.images.about}")`;
+
+</script>
         <div class="about-copy">
 
           <div class="eyebrow">
