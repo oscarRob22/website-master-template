@@ -615,7 +615,7 @@
         </div>
 
 
-        <div class="reviews">
+        <div class="reviews" id="reviewsContainer"></div>
 
           <article class="review">
 
@@ -967,3 +967,30 @@
 
 </body>
 </html>
+
+<script>
+
+  const reviewsContainer =
+    document.getElementById("reviewsContainer");
+
+  SITE.reviews.forEach((review) => {
+
+    const article = document.createElement("article");
+
+    article.className = "review";
+
+    article.innerHTML = `
+      <p>
+        "${review.text}"
+      </p>
+
+      <strong>
+        ${review.name}
+      </strong>
+    `;
+
+    reviewsContainer.appendChild(article);
+
+  });
+
+</script>
