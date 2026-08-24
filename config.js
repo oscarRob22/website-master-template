@@ -11,13 +11,13 @@ const SITE = {
   description:
     "Professional services designed to help customers get the quality, reliability, and experience they deserve.",
 
-  phone: "(555) 555-5555",
+  phone: "(213) 219-6034",
 
-  phoneLink: "tel:5555555555",
+  phoneLink: "tel:213-444-5555",
 
   email: "hello@yourbusiness.com",
 
-  address: "Your City, California",
+  address: "Oceanside, California",
 
   hours: "Monday–Saturday · 8:00 AM–6:00 PM",
 
@@ -49,25 +49,27 @@ const SITE = {
 
   services: [
 
-    {
-      title: "Service One",
-      description:
-        "Description of your first major service."
-    },
+    services: [
 
-    {
-      title: "Service Two",
-      description:
-        "Description of your second major service."
-    },
+  {
+    title: "Brake Repair",
+    description:
+      "Professional brake inspection, repair, and maintenance to keep your vehicle stopping safely."
+  },
 
-    {
-      title: "Service Three",
-      description:
-        "Description of your third major service."
-    }
+  {
+    title: "Engine Diagnostics",
+    description:
+      "Accurate diagnostics to identify engine problems and get your vehicle running properly again."
+  },
 
-  ],
+  {
+    title: "Oil & Maintenance",
+    description:
+      "Routine oil changes and preventative maintenance designed to keep your vehicle performing at its best."
+  }
+
+],
 
 
   // =========================
