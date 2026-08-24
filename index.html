@@ -466,8 +466,9 @@
           Contact
         </a>
 
-        <a href="tel:5555555555">
-          Call Now
+        <a href="#" id="navPhone">
+  Call Now
+</a>
         </a>
 
       </nav>
@@ -788,7 +789,9 @@
 
           <p>
             <strong>Phone:</strong><br>
-            (555) 555-5555
+<a href="#" id="contactPhone">
+  (555) 555-5555
+</a>
           </p>
 
           <p>
@@ -872,14 +875,21 @@
 
   </footer>
 
-<script src="config.js"></script>
-
 <script>
   document.getElementById("businessName").textContent =
     SITE.businessName;
 
   document.getElementById("footerBusinessName").textContent =
     SITE.businessName;
+
+  document.getElementById("navPhone").href =
+    SITE.phoneLink;
+
+  document.getElementById("contactPhone").textContent =
+    SITE.phone;
+
+  document.getElementById("contactPhone").href =
+    SITE.phoneLink;
 </script>
 
 </body>
