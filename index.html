@@ -490,16 +490,16 @@
 
         <div class="hero-content">
 
-          <div class="eyebrow">
-            Professional Service
+          <div class="eyebrow" id="heroEyebrow">
+  Professional Service
           </div>
 
-          <h1>
-            YOUR BUSINESS.<br>
-            YOUR NEXT CUSTOMER.
-          </h1>
+<h1 id="heroHeadline">
+  YOUR BUSINESS.<br>
+  YOUR NEXT CUSTOMER.
+</h1>
 
-<p id="businessTagline">
+<p id="heroDescription">
   A professional website built to help your
   business look credible, get discovered,
   and turn visitors into customers.
@@ -916,3 +916,15 @@
 </script>
 </body>
 </html>
+<script>
+
+  document.getElementById("heroEyebrow").textContent =
+    SITE.hero.eyebrow;
+
+  document.getElementById("heroHeadline").innerHTML =
+    SITE.hero.headline;
+
+  document.getElementById("heroDescription").textContent =
+    SITE.hero.description;
+
+</script>
